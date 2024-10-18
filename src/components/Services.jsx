@@ -2,7 +2,7 @@
 
 const Services = () => {
   return (
-    <div>
+    <div id="services">
       <section className="bg-white py-16 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">

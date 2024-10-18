@@ -22,7 +22,7 @@ const Navbar = () => {
         };
     }, []);
     return (
-        <div>
+        <div id="navbar">
             {/* Navbar */}
             <nav className="bg-blue-600 p-4 fixed top-0 w-full z-50 shadow-lg hover:shadow-xl transition duration-500">
                 <div className=" container mx-auto flex justify-between items-center ">
@@ -69,25 +69,25 @@ const Navbar = () => {
                         } md:hidden bg-gray-800 absolute inset-0 z-50 px-2 pt-2 pb-3 space-y-1 sm:px-3`}
                         onClick={() => setIsOpen(!isOpen)}>
 
-                        <div className="md:hidden top-0 right-0 bg-[#fff] py-3 w-[400px] h-[100vh] fixed" onClick={(e) => e.stopPropagation()} ref={navbarRef}>
+                        <div className="md:hidden top-0 right-0 bg-[#fff] py-3 w-[250px] h-[100vh] fixed" onClick={(e) => e.stopPropagation()} ref={navbarRef}>
                             <div className="flex justify-between items-center border-b-2 pb-2 px-5 border-blue-600">
                                 <i onClick={() => setIsOpen(!isOpen)} className="fa-solid fa-xmark text-2xl cursor-pointer"></i>
-                                <h4 className=" text-blue-600 text-2xl font-bold cursor-pointer" >HR Solutions</h4>
+                                <h4 href="#navbar" className=" text-blue-600 text-2xl font-bold cursor-pointer" onClick={() => setIsOpen(!isOpen)} >HR Solutions</h4>
                             </div>
                             <div className="pt-2 pb-3 space-y-1 sm:px-3 px-5 float-end">
                                 <ul className="mt-10 mb-10">
                                     <li>
-                                        <a href="#about" className="flex text-[18px] justify-end hover:text-blue-600 cursor-pointer">
+                                        <a href="#about" onClick={() => setIsOpen(!isOpen)} className="flex text-[18px] justify-end hover:text-blue-600 cursor-pointer">
                                             About
                                         </a>
                                     </li>
                                     <li >
-                                        <a href="#services" className="flex text-[18px] justify-end hover:text-blue-600 cursor-pointer">
+                                        <a href="#services" onClick={() => setIsOpen(!isOpen)} className="flex text-[18px] justify-end hover:text-blue-600 cursor-pointer">
                                             Services
                                         </a>
                                     </li>
                                     <li >
-                                        <a href="#contact" className="flex text-[18px] justify-end hover:text-blue-600 cursor-pointer">
+                                        <a href="#contact" onClick={() => setIsOpen(!isOpen)} className="flex text-[18px] justify-end hover:text-blue-600 cursor-pointer">
                                             Contact
                                         </a>
                                     </li>
